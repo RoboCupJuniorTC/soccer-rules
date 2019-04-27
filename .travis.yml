@@ -1,0 +1,11 @@
+sudo: false
+language: generic
+matrix:
+  include:
+    - os: linux
+      env: TEST_LANG='paper'
+script: |
+  if [[ $TEST_LANG == paper ]]
+  then
+    source .ci/build.sh
+  fi
